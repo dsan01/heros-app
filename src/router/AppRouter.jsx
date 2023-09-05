@@ -1,7 +1,7 @@
 import React from 'react'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 
-import {DCPage, MarvelPage} from '../heroes/pages/';
+import {DCPage, HeroPage, MarvelPage, SearchPage} from '../heroes/pages/';
 import {LoginPage} from '../auth/pages/';
 import {HeroesApp} from '../HeroesApp';
 
@@ -11,18 +11,30 @@ const router = createBrowserRouter([
         element: <HeroesApp />,
         children: [
             {
-                path: '/marvel',
+                path: 'marvel',
                 element: <MarvelPage />
             },
             {
-                path: '/dc',
+                path: 'dc',
                 element: <DCPage />,
             },
             {
-                path: '/login',
-                element: <LoginPage />,
+                path: 'search',
+                element: <SearchPage />,
+            },
+            {
+                path: 'hero',
+                element: <HeroPage />,
             }
         ],
+    },
+    {
+        path: 'login',
+        element:  <LoginPage />
+    },
+    {
+        path: '*',
+        element: <Navigate to={'/'} />
     }
 ])
 

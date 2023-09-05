@@ -9,9 +9,9 @@ export const Navbar = () => {
             data-te-navbar-ref>
             <div className="flex w-full flex-wrap items-center justify-between px-3">
                 <div className="ml-2">
-                    <Link className="text-2xl  text-green-600 font-pacifico" to="/"> Heroes app </Link>
+                    <Link className="text-2xl  text-green-600 font-bangers" to="/"> Heroes app </Link>
                 </div>
-                <div className="!visible mt-2 hidden flex-grow basis-[100%] items-center lg:mt-0 lg:!flex lg:basis-auto">
+                <div className="!visible hidden flex-grow basis-[100%] items-center lg:mt-0 lg:!flex lg:basis-auto">
                     <ul className="list-style-none mr-auto flex flex-col pl-0 lg:mt-1 lg:flex-row" data-te-navbar-nav-ref>
                         <li className="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1">
                             <NavLink
@@ -33,7 +33,16 @@ export const Navbar = () => {
                                 DC
                             </NavLink>
                         </li>
-                        
+                        <li className="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1">
+                            <NavLink
+                                className={ ({ isActive }) => 
+                                    
+                                    `p-0 text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none  lg:px-2 [&.active]:text-black/90 ${isActive ? 'active underline' : ''}`
+                                }
+                                to="/search">
+                                Search
+                            </NavLink>
+                        </li>
                     </ul>
                 </div>
                 <div className="mb-4 p-2 lg:mb-0 lg:pl-0 lg:pr-1 flex justify-end">

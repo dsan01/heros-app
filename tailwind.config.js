@@ -6,7 +6,7 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily: { 'pacifico': ['"Pacifico"', 'cursive'], }
+      fontFamily: { 'bangers': ['"Bangers"', 'cursive'], }
     },
   },
   plugins: [],
