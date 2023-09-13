@@ -16,7 +16,7 @@ export const HeroCard = ({
         <Link to={`/hero/${id}`}>
             <div className="flex flex-col border rounded-md shadow h-96 hover:-translate-y-1 transition ease-in-out delay-150 " >
                 <div className="h-1/2 overflow-hidden grow">
-                    <img className="object-none  w-full rounded-t-md object-center" src={imagePath} alt={superhero} />
+                    <img className=" w-full rounded-t-md object-center" src={imagePath} alt={superhero} />
                 </div>
                 <div className="p-4">
                     <h5 className="text-center text-lg font-semibold mb-3"> {superhero} </h5>
