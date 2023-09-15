@@ -4,13 +4,14 @@ import { AuthContext } from '../context'
 
 export const LoginPage = () => {
 
-  // const {login} = useContext(AuthContext)
+  const { login } = useContext(AuthContext)
   const navigate = useNavigate()
 
   const onLogin = () => {
     
-    // login('David Sanchez')
-    navigate("/", {
+    login('David Sanchez')
+    
+    navigate("/marvel", {
       replace: true
     });
 }
@@ -22,7 +23,7 @@ export const LoginPage = () => {
 
       <button
         className='w-max bg-blue-500 px-4 py-2 rounded-lg text-white cursor-pointer hover:bg-blue-300'
-        onClick={onLogin}
+        onClick={ onLogin }
       > 
         Login
       </button>

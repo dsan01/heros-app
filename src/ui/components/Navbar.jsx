@@ -1,12 +1,16 @@
 import { Link, NavLink, useNavigate } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons'
+import { useContext } from "react"
+import { AuthContext } from "../../auth/context"
 
 export const Navbar = () => {
 
     const navigate = useNavigate()
+    const { user, logout } = useContext(AuthContext)
 
     const onLogout = () => {
+        logout()
         navigate("/login", {
             replace: true
         })
@@ -52,6 +56,9 @@ export const Navbar = () => {
                     </ul>
                 </div>
                 <div className="mb-4 p-2 lg:mb-0 lg:pl-0 lg:pr-1 flex justify-end">
+                    <p className="pr-4 text-blue-500 font-semibold">
+                        {user?.name}
+                    </p>
                     <button
                         className="p-0 text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none  lg:px-2 [&.active]:text-black/90"
                         onClick={onLogout}>
