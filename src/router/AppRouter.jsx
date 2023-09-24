@@ -5,7 +5,7 @@ import {LoginPage} from '../auth/pages/';
 import { childHeroesRoutes } from '../heroes/router/childHeroesRoutes';
 import { HeroesRoutes } from '../heroes/router/HeroesRoutes';
 import { PrivateRouter } from './PrivateRouter';
-import { PublicRoute } from './PublicRoute';
+
 
 const router = createBrowserRouter([
     {
