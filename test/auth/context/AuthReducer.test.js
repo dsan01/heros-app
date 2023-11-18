@@ -41,7 +41,6 @@ describe('Pruebas en el authContext', () => {
         }
 
         const Newstate = authReducer(state, action)
-        console.log(Newstate)
         expect(Newstate).toEqual({ 
             logged: false
         }) 
