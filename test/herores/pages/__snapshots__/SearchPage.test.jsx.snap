@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <SearchPage> Debe de mostrarse correctamente con valores con defecto 1`] = `
+<div>
+  <div
+    class="grid grid-cols-12 my-5"
+  >
+    <h1
+      class="text-3xl font-semibold col-span-12"
+    >
+       Buscar un heroe 
+    </h1>
+    <div
+      class="col-span-5 px-4"
+    >
+      <h4
+        class="text-xl py-4 font-medium"
+      >
+        Busqueda
+      </h4>
+      <form
+        aria-label="form"
+      >
+        <input
+          autocomplete="off"
+          class=" shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          name="searchtext"
+          placeholder="Busca un superheroe"
+          type="text"
+          value=""
+        />
+        <button
+          class="w-max bg-blue-500 px-4 py-2 my-4 rounded-lg text-white cursor-pointer hover:bg-blue-300"
+        >
+          Buscar
+        </button>
+      </form>
+    </div>
+    <div
+      class="col-span-7 px-4"
+    >
+      <h4
+        class="text-xl py-4 font-medium"
+      >
+        Resultados
+      </h4>
+      <div
+        class="grid grid-cols-1 justify-items-center w-full flex-col bg-slate-100 p-4 rounded"
+      >
+        <img
+          alt=""
+          class="w-1/4 mb-3"
+          src="/assets/searching.svg"
+        />
+        <p
+          class="text-center"
+        >
+          Realiza una busqueda
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

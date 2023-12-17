@@ -18,6 +18,7 @@ export const SearchPage = () => {
 
     const onSearchSubmit = (event) => {
         event.preventDefault()
+        console.log('holi')
         setSearchParams({q: searchtext});
     }
 
@@ -27,7 +28,7 @@ export const SearchPage = () => {
                 <h1 className="text-3xl font-semibold col-span-12"> Buscar un heroe </h1>
                 <div className="col-span-5 px-4">
                     <h4 className="text-xl py-4 font-medium">Busqueda</h4>
-                    <form onSubmit={onSearchSubmit}>
+                    <form onSubmit={onSearchSubmit} aria-label="form">
                         <input
                             type="text"
                             className=" shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -52,7 +53,7 @@ export const SearchPage = () => {
                                 <img src="/assets/searching.svg" alt="" className="w-1/4 mb-3" />
                                 <p className="text-center">Realiza una busqueda</p>
                             </div> : (heroes.length === 0) && 
-                            <div className="grid grid-cols-1 justify-items-center w-full flex-col bg-red-100 p-4 rounded">
+                            <div aria-label="alert-danger"  className="grid grid-cols-1 justify-items-center w-full flex-col bg-red-100 p-4 rounded">
                                 <img src="/assets/we-got-a-problem.svg" alt="" className="w-1/4 mb-3" />
                                 <p className="text-center">No hay resultados para { q }</p>
                             </div>
